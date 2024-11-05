@@ -13,4 +13,9 @@ export class PaperService {
   getPapers(): Observable<Paper[]> {
     return this.http.get<Paper[]>(this.apiUrl);
   }
+
+  // 論文詳細を取得
+  getPaper(id: number): Observable<Paper> {
+    return this.http.get<Paper>(`${this.apiUrl}${id}/`);
+  }
 }
