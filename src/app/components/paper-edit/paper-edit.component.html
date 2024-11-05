@@ -1,0 +1,22 @@
+<h2>Edit Paper</h2>
+<button (click)="goToPaperDetail()">論文詳細へ</button>
+<form [formGroup]="paperForm" (ngSubmit)="onSubmit()">
+    <label for="title">Title</label>
+    <input id="title" formControlName="title" type="text">
+    <br>
+    <label for="authors">Authors</label>
+    <input id="authors" formControlName="authors" type="text">
+    <br>
+    <label for="publication_year">Publication Year</label>
+    <input id="publication_year" formControlName="publication_year" type="number">
+    <br>
+    <label for="abstract">Abstract</label>
+    <textarea id="abstract" formControlName="abstract"></textarea>
+    <br>
+    <label for="doi">DOI</label>
+    <input id="doi" formControlName="doi" type="text">
+    <br>
+    <label for="paper_url">paper URL</label>
+    <input id="paper_url" formControlName="paper_url" type="text">
+    <button type="submit">論文情報を更新する</button>
+</form>

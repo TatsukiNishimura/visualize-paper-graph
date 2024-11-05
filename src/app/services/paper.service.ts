@@ -18,4 +18,9 @@ export class PaperService {
   getPaper(id: number): Observable<Paper> {
     return this.http.get<Paper>(`${this.apiUrl}${id}/`);
   }
+
+  // 論文情報の更新
+  updatePaper(id: number, paperData: Partial<Paper>): Observable<Paper> {
+    return this.http.put<Paper>(`${this.apiUrl}${id}/`, paperData);
+  }
 }
