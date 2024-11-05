@@ -33,6 +33,9 @@ export class PaperDetailComponent implements OnInit {
 
   goToPaperList(): void {
     this.router.navigate(['/papers']);
+  }
 
+  goToEditPaper(): void {
+    this.router.navigate(['/papers', this.paper?.id, 'edit']);
   }
 }
