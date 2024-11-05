@@ -1,34 +1,44 @@
-<div *ngIf="paper">
-  <button (click)="goToPaperList()">Back</button>
-  <h2>{{ paper.title }}</h2>
-  <p><strong>Authors:</strong> {{ paper.authors }}</p>
-  <p><strong>Publication Year:</strong> {{ paper.publication_year }}</p>
-  <p><strong>DOI:</strong> {{ paper.doi }}</p>
-  <p><strong>URL:</strong> <a href="{{ paper.paper_url }}" target="_blank">{{ paper.paper_url }}</a></p>
-  <p><strong>Abstract:</strong> {{ paper.abstract }}</p>
-  <button (click)="goToEditPaper()">論文情報を編集</button>
-  <!--     
-    <h3>References</h3>
-    <ul *ngIf="citations.length > 0; else noCitations">
-      <li *ngFor="let citation of citations">
-        <a [routerLink]="['/papers', citation.id]">{{ citation.title }}</a>
-      </li>
-    </ul>
-    <ng-template #noCitations>
-      <p>No references found.</p>
-    </ng-template>
-  
-    <h3>Cited By</h3>
-    <ul *ngIf="citedBy.length > 0; else noCitedBy">
-      <li *ngFor="let cited of citedBy">
-        <a [routerLink]="['/papers', cited.id]">{{ cited.title }}</a>
-      </li>
-    </ul>
-    <ng-template #noCitedBy>
-      <p>No citations found.</p>
-    </ng-template> -->
-</div>
+<button (click)="goToPaperList()" class="button">Back</button>
+<div>
 
-<ng-template *ngIf="!paper">
-  <p>Loading...</p>
-</ng-template>
+</div>
+<div class="paper-detail-container">
+  <!-- 論文のタイトル -->
+  <h1 class="paper-title">{{ paper?.title }}</h1>
+
+  <!-- 論文の基本情報 -->
+  <div class="paper-info">
+    <p><span class="paper-label">Authors:</span> {{ paper?.authors }}</p>
+    <p><span class="paper-label">Publication Year:</span> {{ paper?.publication_year }}</p>
+    <p><span class="paper-label">DOI:</span> {{ paper?.doi }}</p>
+  </div>
+
+  <!-- アブストラクトセクション -->
+  <div class="abstract-section">
+    <p><span class="paper-label">Abstract:</span></p>
+    <p>{{ paper?.abstract }}</p>
+  </div>
+
+  <!-- 引用リスト -->
+  <!-- <h2 class="references-title">References</h2>
+  <ul class="references-list" *ngIf="citations.length > 0; else noCitations">
+    <li *ngFor="let citation of citations">
+      <a [routerLink]="['/papers', citation.id]">{{ citation.title }}</a>
+    </li>
+  </ul>
+  <ng-template #noCitations>
+    <p>No references found.</p>
+  </ng-template> -->
+
+  <!-- 被引用リスト -->
+  <!-- <h2 class="cited-by-title">Cited By</h2>
+  <ul class="cited-by-list" *ngIf="citedBy.length > 0; else noCitedBy">
+    <li *ngFor="let cited of citedBy">
+      <a [routerLink]="['/papers', cited.id]">{{ cited.title }}</a>
+    </li>
+  </ul>
+  <ng-template #noCitedBy>
+    <p>No citations found.</p>
+  </ng-template> -->
+  <button (click)="goToEditPaper()" class="button">論文情報を編集</button>
+</div>

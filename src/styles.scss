@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+/* 共通ボタンスタイル */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* ホバースタイル */
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* アクティブスタイル */
+.button:active {
+    transform: scale(0.98);
+}
+
+/* ボタンの無効スタイル */
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

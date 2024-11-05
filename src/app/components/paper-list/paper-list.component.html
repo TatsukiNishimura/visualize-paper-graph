@@ -1,12 +1,14 @@
 <div *ngIf="papers.length > 0; else noData">
-    <ul>
-        <li *ngFor="let paper of papers">
-            <h3>
-                <a [routerLink]="['/papers', paper.id]"> {{ paper.title }} ({{ paper.publication_year }})</a>
-            </h3>
-            <p>{{ paper.authors }}</p>
-        </li>
-    </ul>
+    <div class="paper-list-container">
+        <div *ngFor="let paper of papers" class="paper-card">
+            <a [routerLink]="['/papers', paper.id]" class="paper-title">{{ paper.title }}</a>
+            <div class="paper-info">
+                <p><strong>Authors:</strong> {{ paper.authors }}</p>
+                <p><strong>Publication Year:</strong> {{ paper.publication_year }}</p>
+                <p><strong>DOI:</strong> {{ paper.doi }}</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <ng-template #noData>

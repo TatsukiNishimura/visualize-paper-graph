@@ -1,5 +1,5 @@
 <h2>Edit Paper</h2>
-<button (click)="goToPaperDetail()">論文詳細へ</button>
+<button (click)="goToPaperDetail()" class="button">論文詳細へ</button>
 <form [formGroup]="paperForm" (ngSubmit)="onSubmit()">
     <label for="title">Title</label>
     <input id="title" formControlName="title" type="text">

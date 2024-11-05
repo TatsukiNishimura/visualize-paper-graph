@@ -1,0 +1,44 @@
+/* ページ全体のスタイル */
+.paper-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* カードスタイル */
+.paper-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.paper-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* タイトルのリンク */
+.paper-title {
+    font-size: 1.5em;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.paper-title:hover {
+    text-decoration: underline;
+}
+
+/* 論文情報のスタイル */
+.paper-info {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.paper-info p {
+    margin: 4px 0;
+}

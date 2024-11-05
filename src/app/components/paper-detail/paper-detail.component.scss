@@ -1,0 +1,93 @@
+/* 全体コンテナのスタイル */
+.paper-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトルスタイル */
+.paper-title {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* 論文情報のセクション */
+.paper-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.paper-info p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* ラベルとデータを分けて見やすくするスタイル */
+.paper-label {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* アブストラクトセクション */
+.abstract-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+}
+
+/* リスト見出しのスタイル */
+.references-title,
+.cited-by-title {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* 引用リストのスタイル */
+.references-list,
+.cited-by-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.references-list li,
+.cited-by-list li {
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.references-list li:hover,
+.cited-by-list li:hover {
+    background-color: #e6f7ff;
+}
+
+.references-list a,
+.cited-by-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.references-list a:hover,
+.cited-by-list a:hover {
+    text-decoration: underline;
+}
