@@ -1,0 +1,12 @@
+<div class="dialog-container">
+    <h2 class="dialog-title">Import Paper from BibTeX</h2>
+
+    <!-- BibTeXテキストエリア -->
+    <textarea [(ngModel)]="bibtexContent" placeholder="Paste your BibTeX here" rows="10"></textarea>
+
+    <!-- アクションボタン -->
+    <div class="dialog-actions">
+        <button mat-button (click)="onCancel()">Cancel</button>
+        <button mat-raised-button color="primary" (click)="onImport()">Import</button>
+    </div>
+</div>

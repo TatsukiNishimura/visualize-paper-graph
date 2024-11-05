@@ -23,4 +23,8 @@ export class PaperService {
   updatePaper(id: number, paperData: Partial<Paper>): Observable<Paper> {
     return this.http.put<Paper>(`${this.apiUrl}${id}/`, paperData);
   }
+
+  addPaper(paperData: Partial<Paper>): Observable<Paper> {
+    return this.http.post<Paper>(this.apiUrl, paperData);
+  }
 }

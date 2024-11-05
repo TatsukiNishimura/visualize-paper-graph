@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Paper } from 'src/app/models/paper.model';
 import { PaperService } from 'src/app/services/paper.service';
 @Component({
@@ -10,7 +11,7 @@ export class PaperListComponent implements OnInit {
 
 
   papers: Paper[] = [];
-  constructor(private paperService: PaperService) { }
+  constructor(private paperService: PaperService, private router: Router) { }
 
   ngOnInit(): void {
     this.paperService.getPapers().subscribe(
@@ -24,6 +25,10 @@ export class PaperListComponent implements OnInit {
         }
       }
     )
+  }
+
+  goToCreatePaper(): void {
+    this.router.navigate(['/papers/create']);
   }
 
 }

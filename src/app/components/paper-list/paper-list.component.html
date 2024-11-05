@@ -1,3 +1,5 @@
+<button (click)="goToCreatePaper()" class="button">論文情報を追加</button>
+
 <div *ngIf="papers.length > 0; else noData">
     <div class="paper-list-container">
         <div *ngFor="let paper of papers" class="paper-card">

@@ -1,0 +1,23 @@
+<button (click)="goToPaperList()" class="button">戻る</button>
+<div class="paper-create-container">
+    <h2>論文情報を追加する</h2>
+    <button mat-raised-button color="primary" (click)="openImportDialog()">Import from BibTeX</button>
+    <form [formGroup]="paperForm" (ngSubmit)="onSubmit()">
+        <label for="title">Title</label>
+        <input id="title" formControlName="title" type="text" placeholder="Enter the title of the paper">
+
+        <label for="authors">Authors</label>
+        <input id="authors" formControlName="authors" type="text" placeholder="Enter author names, separated by commas">
+
+        <label for="publication_year">Publication Year</label>
+        <input id="publication_year" formControlName="publication_year" type="number" placeholder="e.g., 2023">
+
+        <label for="abstract">Abstract</label>
+        <textarea id="abstract" formControlName="abstract" placeholder="Enter a brief abstract of the paper"></textarea>
+
+        <label for="doi">DOI</label>
+        <input id="doi" formControlName="doi" type="text" placeholder="e.g., 10.1234/example5678">
+
+        <button type="submit" class="button" [disabled]="!paperForm.valid">追加</button>
+    </form>
+</div>
