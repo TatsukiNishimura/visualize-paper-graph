@@ -1,0 +1,14 @@
+<div *ngIf="papers.length > 0; else noData">
+    <ul>
+        <li *ngFor="let paper of papers">
+            <h3>{{ paper.title }}</h3>
+            <p>Authors: {{ paper.authors }}</p>
+            <p>Year: {{ paper.publication_year }}</p>
+            <p>DOI: {{ paper.doi }}</p>
+        </li>
+    </ul>
+</div>
+
+<ng-template #noData>
+    <p>No papers available.</p>
+</ng-template>
